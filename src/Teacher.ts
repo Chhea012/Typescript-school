@@ -1,10 +1,12 @@
 import { Subject } from './Subject'; // Adjust the path as needed
+import { User } from './User';
 
-export class Teacher {
+export class Teacher extends User{
     private specialization: string;
-    private subjects: Subject[];
+    private subjects: Subject[] = [];
 
-    constructor(specialization: string) {
+    constructor(id: number, name: string, specialization: string) {
+        super(id, name);
         this.specialization = specialization;
         this.subjects = [];
     }
